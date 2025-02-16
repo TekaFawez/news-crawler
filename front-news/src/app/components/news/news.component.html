@@ -1,0 +1,15 @@
+<div  >
+    <h1>News Crawler</h1>
+    <input [(ngModel)]="query" placeholder="Enter search term">
+    <button (click)="search()">Search</button>
+  
+    <ul >
+      <li *ngFor="let article of articles">
+        <h3>{{ article.title }}</h3>
+        <p>{{ article.description }}</p>
+        <p> <b [style.color]="'red'">Source</b>  : {{ article.sourceName }}</p>
+        <a [href]="article.url" target="_blank">Read more</a>
+      </li>
+    </ul>
+ 
+</div>
